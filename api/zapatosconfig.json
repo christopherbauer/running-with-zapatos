@@ -1,0 +1,6 @@
+{
+	"db": {
+		"connectionString": "postgresql://admin:admin1pass@localhost:5432/ecommerce"
+	},
+	"outdir": "./schema"
+}
