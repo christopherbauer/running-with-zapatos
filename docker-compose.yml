@@ -1,0 +1,17 @@
+version: "3.1"
+
+services:
+    db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: admin
+            POSTGRES_PASSWORD: admin1pass
+        volumes:
+            - ./infra/data:/var/lib/postgresql/data
+            - ./infra/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
