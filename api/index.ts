@@ -1,6 +1,7 @@
 import express, { Express, Request, Response, json } from "express";
 import dotenv from "dotenv";
 import userRouter from "./user";
+import productRouter from "./product";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/user", userRouter);
+app.use("/product", productRouter);
 
 console.log(`⚡️[server]: Server starting up`);
 app.listen(port, () => {
